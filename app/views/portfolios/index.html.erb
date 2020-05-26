@@ -2,8 +2,7 @@
 
 <% @portfolio_items.each do |portfolio_item| %>
   <p><%= portfolio_item.title %></p>
-  <%= image_tag portfolio_item.thumb_image %>
-  <!-- <img src="<%= portfolio_item.thumb_image %>" alt="<%= portfolio_item.title %>" /> -->
+  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
   <p><%= portfolio_item.subtitle %></p>
   <p><%= portfolio_item.body %></p>
 <% end %>
