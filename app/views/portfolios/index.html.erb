@@ -1,5 +1,7 @@
 <h1>Portfolio items</h1>
 
+<p id="notice"><%= notice %></p>
+
 <%= link_to "Create New Portfolio Item", new_portfolio_url %>
 
 <% @portfolio_items.each do |portfolio_item| %>
@@ -8,4 +10,9 @@
   <p><%= portfolio_item.subtitle %></p>
   <p><%= portfolio_item.body %></p>
   <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
+  <br />
+  <%= link_to 'Delete portfolio item', portfolio_path(portfolio_item), 
+      method: :delete, 
+      data: { confirm: 'Are you sure?' } 
+  %>
 <% end %>
