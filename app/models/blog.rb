@@ -4,4 +4,5 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
   validates_presence_of :title, :body
+  has_one :topic
 end
