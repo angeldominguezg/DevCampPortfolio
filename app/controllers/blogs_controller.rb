@@ -6,6 +6,12 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
 
+    # Testing debugging with pry
+    # binding.pry
+    # @blogs = Blog.special_blogs
+    # binding.pry
+
+    # Puts debug
     # puts "*"*500
     # puts @blogs.inspect
     # puts "*"*500
