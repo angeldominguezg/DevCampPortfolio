@@ -53,3 +53,4 @@ gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
+gem 'devcamp_view_tool_angelddg', git: 'https://github.com/angeldominguezg/devcamp_view_tool'

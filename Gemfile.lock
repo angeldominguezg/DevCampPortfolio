@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/angeldominguezg/devcamp_view_tool
+  revision: e76acebaa32e8436cc4215fd49bbc0c2b220b1ef
+  specs:
+    devcamp_view_tool_angelddg (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -252,6 +258,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.5.0)
   byebug
+  devcamp_view_tool_angelddg!
   devise (~> 4.7, >= 4.7.1)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.7)
