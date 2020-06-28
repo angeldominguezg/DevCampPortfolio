@@ -2,6 +2,6 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to "Create New Portfolio Item", new_portfolio_url %>
+<%= link_to "Create New Portfolio Item", new_portfolio_url if logged_in?(:site_admin) %>
 
  <%= render partial: 'portfolio_item', collection:  @portfolio_items %>

@@ -6,11 +6,11 @@
 
   <p><%= portfolio_item.body %></p>
 
-  <%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio_item.id)  if logged_in?(:site_admin) %>
 
   <br />
 
   <%= link_to 'Delete portfolio item', portfolio_path(portfolio_item), 
       method: :delete, 
-      data: { confirm: 'Are you sure?' } 
+      data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) 
   %>
