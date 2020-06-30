@@ -13,16 +13,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <%= render 'shared/application_nav', location: 'top' %>
 
-      <%= loginHelper %>
-
       <%= yield %>
 
-      <%= @copyright %>
+      <%= render 'shared/application_footer' %>
 
       <%= sourceHelper("Application") %>
 
