@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
     <title><%= @page_title %></title>
     <meta name="keywords" content="<%= @seo_keywords %>"/>
     <%= csrf_meta_tags %>
@@ -11,17 +14,18 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-    <%= render 'shared/nav', location: 'top' %>
+      <%= render 'shared/application_nav', location: 'top' %>
 
-    <%= loginHelper %>
+      <%= loginHelper %>
 
-    <%= yield %>
+      <%= yield %>
 
-    <%= @copyright %>
+      <%= @copyright %>
 
-    <%= sourceHelper("Application") %>
+      <%= sourceHelper("Application") %>
+
+    </div>
   </body>
 </html>
