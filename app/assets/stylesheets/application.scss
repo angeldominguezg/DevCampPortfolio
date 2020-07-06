@@ -135,3 +135,10 @@ body {
 .auth-links a {
     color: $dark
 }
+
+.login>.card {
+    width: 23rem;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
