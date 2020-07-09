@@ -1,22 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<div class="col-md-8 blog-main">
+    <h3 class="pb-4 mb-4 font-italic border-bottom">
+        My blog
+    </h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <%= render @blogs %>
-  </tbody>
-</table>
 
-<br>
+    <%= sourceHelper("Blog") %>
+    <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+    </nav>
 
-<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+</div>
+<!-- /.blog-main -->
