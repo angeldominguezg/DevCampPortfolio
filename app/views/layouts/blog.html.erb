@@ -3,49 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title><%= @page_title %></title>
     <meta name="keywords" content="<%= @seo_keywords %>"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-     <div class="container">
-      <header class="blog-header py-3">
-        <div class="row flex-nowrap align-items-center">
-          <div class="col-4 text-center">
-              <a class="blog-header-logo text-dark" href="#">Angel Dominguez</a>
-          </div>
-        </div>
-      </header>
-      <%# Start of nav %>
+    <div class="container">
+      <%= render 'shared/blog_masthead' %>
       <%= render 'shared/blog_nav' %>
-      <%# End of nav %>
-    </div> <!-- End main container div -->
-
+    </div>
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-12">
               <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
             </div>
             <%= yield %>
-            <!-- /.blog-sidebar -->
             <%= render 'shared/blog_sidebar' %>
         </div>
-        <!-- /.row -->
-
     </main>
-    <!-- /.container -->
-
-    <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-    </footer>
+    <%= render 'shared/blog_footer' %>
   </body>
 </html>
