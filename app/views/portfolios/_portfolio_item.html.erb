@@ -1,4 +1,4 @@
-  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
+<!--  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
 
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 
@@ -14,3 +14,27 @@
       method: :delete, 
       data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) 
   %>
+-->
+
+<div class="col-md-4">
+  <div class="card mb-4 shadow-sm">
+    <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+
+    <div class="card-body">
+      <p>
+        <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span><br>
+        <em><%= portfolio_item.subtitle %></em>
+      </p>
+
+      <!-- <p class="card-text"><%= portfolio_item.body %></p> -->
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        </div>
+        <small class="text-muted">9 mins</small>
+      </div>
+    </div>
+  </div>
+</div>
