@@ -1,24 +1,19 @@
-<%# binding.pry %>
-<%= image_tag @portfolio_item.main_image %>
+<%= render 'shared/portfolio_masthead' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
+      <em><%= @portfolio_item.subtitle %></em>
+      <p><%= @portfolio_item.body %></p>
+      <h2>Technologies use</h2>
+      <% @portfolio_item.technologies.each do |t| %>
+          <p><%= t.name %></p>
+      <% end %>
+      <hr />
+    </div>
+  </div>
+</div>
 
-<h1><%= @portfolio_item.title %></h1>
-
-<em><%= @portfolio_item.subtitle %></em>
-
-<p><%= @portfolio_item.body %></p>
-
-<h2>Technologies use</h2>
-<% @portfolio_item.technologies.each do |t| %>
-
-    <p><%= t.name %></p>
-
-<% end %>
-
-
-<hr />
-
-<%= params.inspect %>
-
-<hr/>
-
-<%# session.inspect %>
