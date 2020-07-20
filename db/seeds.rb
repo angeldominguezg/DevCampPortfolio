@@ -42,7 +42,7 @@ puts "5 skills created!"
     title: "Portfolio Item #{portfolio_item}",
     subtitle: "Ruby on rails",
     body: "Nunc aliquet enim justo, ac luctus eros tempor accumsan. Maecenas consequat vehicula condimentum. Nulla mattis eros et malesuada tincidunt. Aliquam at mauris nec est porttitor pellentesque. Maecenas hendrerit vitae tellus sed cursus. Mauris in bibendum urna. Donec in tempor nisi, semper semper odio. Sed id orci magna.",
-    main_image: "https://via.placeholder.com/600x200",
+    main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200",
   )
 end
@@ -55,7 +55,7 @@ puts "8 portfolio Ruby created!"
     title: "Portfolio Item #{portfolio_item}",
     subtitle: "Angular",
     body: "Nunc aliquet enim justo, ac luctus eros tempor accumsan. Maecenas consequat vehicula condimentum. Nulla mattis eros et malesuada tincidunt. Aliquam at mauris nec est porttitor pellentesque. Maecenas hendrerit vitae tellus sed cursus. Mauris in bibendum urna. Donec in tempor nisi, semper semper odio. Sed id orci magna.",
-    main_image: "https://via.placeholder.com/600x200",
+    main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200",
   )
 end
