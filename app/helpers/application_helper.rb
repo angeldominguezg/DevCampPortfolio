@@ -22,4 +22,15 @@ module ApplicationHelper
       content_tag(:p, "Thanks for visiting me from #{session[:source]} and you're on #{layout_name} layout", class: "source-greeting")
     end
   end
+
+  def nav_helper style, tag_type
+nav_links = <<NAV
+<#{tag_type}><a href="#{root_path}" class="#{style}">Home</#{tag_type}>
+<#{tag_type}><a href="#{about_path}" class="#{style}">About Me</#{tag_type}>
+<#{tag_type}><a href="#{contact_path}" class="#{style}">Contact</#{tag_type}>
+<#{tag_type}><a href="#{blogs_path}" class="#{style}">Blog</#{tag_type}>
+<#{tag_type}><a href="#{portfolios_path}" class="#{style}">Portfolios</#{tag_type}>
+NAV
+    return nav_links.html_safe
+  end
 end
