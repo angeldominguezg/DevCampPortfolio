@@ -1,11 +1,6 @@
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
-      <%# <a class="p-2 text-muted" href="#">World</a> %>
-      <%= link_to "Home", root_path, class: 'p-2 text-muted' %>
-      <%= link_to "About Me", about_path, class: 'p-2 text-muted' %>
-      <%= link_to "Contact", contact_path, class: 'p-2 text-muted' %>
-      <%= link_to "Blog", blogs_path, class: 'p-2 text-muted' %>
-      <%= link_to "Portfolios", portfolios_path, class: 'p-2 text-muted' %>
+      <%= nav_helper 'tp-2 text-muted', 'span' %>
       <%= loginHelper 'p-2 text-muted' %>
   </nav>
 </div>
