@@ -9,7 +9,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-controller="drag" data-drag-url="/portfolios/:id/move">
           <%= render partial: 'portfolio_item', collection:  @portfolio_items %>
         </div>
       </div>

@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy, :move]
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
@@ -33,6 +33,11 @@ class PortfoliosController < ApplicationController
   def edit
   end
 
+  def move
+    @portfolio_item.insert_at(params[:position].to_i)
+    head :ok
+  end
+
   def update
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
@@ -58,7 +63,7 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title, :subtitle, :body, :position, technologies_attributes: [:name])
   end
 
   def set_portfolio_item
