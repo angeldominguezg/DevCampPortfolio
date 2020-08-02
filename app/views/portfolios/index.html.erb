@@ -9,7 +9,7 @@
             </p>
           </div>
         </div>
-        <div class="row" data-controller="drag" data-drag-url="/portfolios/:id/move">
+        <div class="row" data-controller="<%= 'drag' if logged_in?(:site_admin) %>" data-drag-url="<%=  '/portfolios/:id/move' if logged_in?(:site_admin) %>">
           <%= render partial: 'portfolio_item', collection:  @portfolio_items %>
         </div>
       </div>
